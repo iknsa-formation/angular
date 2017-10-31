@@ -5,7 +5,10 @@ import { Component, OnInit} from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
+
+now: Date= new Date();
+
  etudiants: Array<any> // Array<string>
 constructor() {
 	this.etudiants = [
@@ -30,6 +33,13 @@ constructor() {
         }
     ];
 }
+
+
+
+
+
+
+
 
 ngOnInit(){
         this.getUsers();

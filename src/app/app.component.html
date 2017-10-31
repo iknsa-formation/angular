@@ -43,12 +43,16 @@
       <ul>
 		<li *ngFor="let etudiant of etudiants"> 
 			<span *ngIf="etudiant.moyenne < 10">
-			{{ etudiant.nom }}  avec une moyenne de {{etudiant.moyenne}}
+			{{ etudiant.nom | uppercase }}  avec une moyenne de {{etudiant.moyenne}}
 			</span>
 		</li>	
 	</ul>
     </div>
   </div>
+
+  {{now}}
+  <br>
+  {{now |date}}
 </div>
 </body>
 </html>
