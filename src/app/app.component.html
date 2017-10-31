@@ -42,7 +42,7 @@
     <div class="panel-body">
       <ul>
 		<li *ngFor="let etudiant of etudiants"> 
-			<span *ngIf="etudiant.moyenne < 9">
+			<span *ngIf="etudiant.moyenne < 10">
 			{{ etudiant.nom }}  avec une moyenne de {{etudiant.moyenne}}
 			</span>
 		</li>	
