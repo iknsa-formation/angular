@@ -11,22 +11,26 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { UserComponent } from './user/user.component';
+import { UsersService } from './service/users.service';
 
 const appRoutes: Routes = [
-  { 
-    path: '', 
+  {
+    path: '',
     component: HomeComponent 
   },
-  { 
-    path: 'about', 
+  {
+    path: 'about',
     component: AboutComponent 
   },
-  { 
-    path: 'contact', 
+  {
+    path: 'contact',
     component: ContactComponent 
-  }
-  
+  },
+  {
+    path: 'users',
+    component: UserComponent 
+  }  
 ];
 
 
@@ -38,7 +42,8 @@ const appRoutes: Routes = [
     SidebarComponent,
     AboutComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    UserComponent
   ],
   imports: [
   RouterModule.forRoot(appRoutes),
@@ -46,7 +51,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
