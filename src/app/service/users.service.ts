@@ -4,13 +4,33 @@ import { User } from '../user/user.model';
 @Injectable()
 export class UsersService {
 
-  constructor() {
-  	if (localStorage.getItem("users") === undefined) {
-  		localStorage.setItem("users", JSON.stringify([]));
-  	}
-  }
+  users: any;
 
-  getUsers():any {
-  	return JSON.parse(localStorage.getItem("users"));
+  getUsers(){
+  	this.users = [
+  		{
+  			firstName:"Moussa",
+  			lastName:"Camara",
+  			email:"Moussa@iknsa.fr"
+  		},
+  		{
+  			firstName:"Mouskito",
+  			lastName:"Camara",
+  			email:"Moussa@iknsa.fr"
+  		},
+  		{
+  			firstName:"Khalid",
+  			lastName:"Sookia",
+  			email:"khalid@iknsa.fr"
+  		},
+  		{
+  			firstName:"Moustakime",
+  			lastName:"Kifia",
+  			email:"moustakime@iknsa.fr"
+  		}
+
+  	];
+
+  	return this.users;
   }
 }

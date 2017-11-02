@@ -11,6 +11,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+
+/*
+*  Imporation des users 
+*/
 import { UserComponent } from './user/user.component';
 import { UsersService } from './service/users.service';
 
