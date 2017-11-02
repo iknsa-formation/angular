@@ -21,7 +21,11 @@ const appRoutes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent 
+    component: AboutComponent,
+     children: [
+      { path: 'child-one', component: ContactComponent },
+      { path: 'child-two', component: HomeComponent }
+    ]
   },
   {
     path: 'contact',

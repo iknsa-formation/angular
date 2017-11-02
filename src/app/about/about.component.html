@@ -1,3 +1,11 @@
-<p>
-  about works!
-</p>
+<nav>
+  <a [routerLink]="['child-one']">Enfant 1</a>
+  <a [routerLink]="['child-two']">Enfant 2</a>
+</nav>
+
+<div style="color: red; margin-top: 1rem;">
+  Affichage des routes enfants:
+</div>
+<div style="border: 2px solid red; padding: 1rem;">
+  <router-outlet></router-outlet>
+</div>
