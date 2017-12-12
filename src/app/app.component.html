@@ -8,6 +8,7 @@
 <body>
 	<app-header></app-header>
 
+
 	<div class="jumbotron iknsa-course">
 	  <h1 class="display-3">Hello, world!</h1>
 	  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -16,6 +17,32 @@
 	  <p class="lead">
 	    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 	  </p>
+
+		<table class="table">
+			<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Titre</th>
+				<th scope="col">Résumé</th>
+				<th scope="col">Contenu</th>
+				<th scope="col">Date de publication</th>
+				<th scope="col">Image</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr *ngFor="let post of posts">
+				<th scope="row">1</th>
+				<td>{{ post.title }}</td>
+				<td>{{ post.summary }}</td>
+				<td>{{ post.content }}</td>
+				<td>{{ post.createdAt.date }}</td>
+				<td><img src="assets/{{ post.id }}.{{ post.extension }}" alt="image" style="width:75px;max-height:75px;"></td>
+
+			</tr>
+
+			</tbody>
+		</table>
+
 	</div>
 <h1>
   {{title}}
